@@ -5,8 +5,10 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import Styles from "./social.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import useWindowDimensions from "@/app/hooks/windowDimention";
 
 const SocialIcons = () => {
+  const {mobile} = useWindowDimensions();
   const array = [
     {
       id: 1,
@@ -31,7 +33,7 @@ const SocialIcons = () => {
           <a
             title={i?.title}
             style={{
-              marginLeft: index == 0 ? 0 : "1vw",
+              marginLeft: index == 0 ? 0 : mobile ? "2vw" : "1vw",
               cursor: "pointer",
             }}
             key={i?.id}
@@ -39,7 +41,7 @@ const SocialIcons = () => {
             <FontAwesomeIcon
               icon={i?.icon}
               style={{
-                height: "4vh",
+                height: mobile ? "2.8vh" : "4vh",
               }}
               color={"var(--dark-100)"}
             />

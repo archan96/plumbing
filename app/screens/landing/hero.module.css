@@ -6,6 +6,10 @@
   position: relative;
 }
 
+.container.mob {
+  flex-direction: column-reverse;
+}
+
 .first,
 .second {
   flex: 1;
@@ -26,9 +30,20 @@
   justify-content: space-between;
 }
 
+
+.second.mob {
+  justify-content: space-around;
+}
+
 .title {
   width: 85%;
   font-size: 7vh;
+}
+
+.title.mob {
+  font-size: 3.5vh;
+  margin-top: 15vh;
+  margin-bottom: -5vh;
 }
 
 .social {

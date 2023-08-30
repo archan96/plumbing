@@ -36,3 +36,11 @@
     object-fit: contain;
 }
 
+.logo.mob > img {
+  width: 30vw;
+}
+
+.btn {
+  width: 40vw !important;
+}
+

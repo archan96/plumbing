@@ -1,8 +1,10 @@
-"use client"; 
+"use client";
 import ServiceCard from "@/app/components/cards/serviceCard";
 import Styles from "./services.module.css";
+import useWindowDimensions from "@/app/hooks/windowDimention";
 
 const Services = () => {
+  const { mobile } = useWindowDimensions();
   const array = [
     {
       id: 1,
@@ -26,9 +28,9 @@ const Services = () => {
     },
   ];
   return (
-    <div className={Styles.container}>
-      <div className={Styles?.first}>
-        <div className={Styles?.paragraphs}>
+    <div className={[Styles.container, mobile && Styles?.mob].join(" ")}>
+      <div className={[Styles?.first, mobile && Styles?.mob].join(" ")}>
+        <div className={[Styles?.paragraphs, mobile && Styles?.mob].join(" ")}>
           <p>Our Services</p>
           <p>
             We work with your comfort. Providing a clean and hassle free
@@ -39,16 +41,17 @@ const Services = () => {
         <div
           style={{
             flex: 1,
+            width: mobile ? "90%" : "auto",
             height: "100%",
           }}
         >
           <ServiceCard item={array[0]} />
         </div>
       </div>
-      <div className={Styles?.second}>
+      <div className={[Styles?.second, mobile && Styles?.mob].join(" ")}>
         {array?.slice(1, 4)?.map((i, index) => {
           return (
-            <div key={i?.id} className={Styles?.items}>
+            <div key={i?.id} className={[Styles?.items, mobile && Styles?.mob].join(" ")}>
               <ServiceCard item={i} />
             </div>
           );

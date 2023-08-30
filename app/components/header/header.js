@@ -1,7 +1,9 @@
+import useWindowDimensions from "@/app/hooks/windowDimention";
 import CButton from "../elements/button";
 import Styles from "./header.module.css";
 
 const Header = () => {
+  const { mobile } = useWindowDimensions();
   const menu = [
     {
       id: 1,
@@ -23,16 +25,18 @@ const Header = () => {
   return (
     <header className={[Styles?.head].join(" ")}>
       <div className={Styles?.first}>
-        <a className={Styles?.logo}>
+        <a className={[Styles?.logo, mobile && Styles?.mob].join(" ")}>
           <img src="/assets/images/LLOYD.png" />
         </a>
-        <div className={Styles?.nav}>
-          {menu?.map((i) => {
-            return <a key={i?.id}>{i?.name}</a>;
-          })}
-        </div>
+        {!mobile && (
+          <div className={Styles?.nav}>
+            {menu?.map((i) => {
+              return <a key={i?.id}>{i?.name}</a>;
+            })}
+          </div>
+        )}
       </div>
-      <CButton title="Get a Quote" />
+      <CButton title="Get a Quote" btnStyle={[mobile && Styles?.btn].join(" ")} />
     </header>
   );
 };

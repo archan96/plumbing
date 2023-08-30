@@ -31,6 +31,10 @@
   color: var(--brand-100) !important;
 }
 
+.btn.mob {
+  width: 50vw;
+}
+
 /**switch**/
 /**switch**/
 .switch {
@@ -101,6 +105,10 @@
   background-color: var(--background-300); 
 }
 
+.search.email.mob {
+  width: 85vw;
+}
+
 .email > button {
   all: unset;
   display: flex;
@@ -116,6 +124,12 @@
   align-items: center;
 }
 
+
+.email.mob > button {
+  padding-left: 7vw;
+  padding-right: 7vw;
+}
+
 .search > input {
   all: unset;
   color: black;
@@ -123,6 +137,11 @@
   padding-inline-start: 1.5vw;
   padding-inline-end: 1vw;
   flex: 1;
+}
+
+.search.mob > input {
+  padding-inline-start: 5vw;
+  padding-inline-end: 5vw;
 }
 
 .search > input:focus {

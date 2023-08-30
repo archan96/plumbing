@@ -29,6 +29,11 @@
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#CAE5F1", endColorstr="#F1E0FF", GradientType=1 );
 }
 
+.footer.mob {
+  height: 90vh;
+  flex-direction: column-reverse;
+}
+
 .first,
 .second {
   width: 40%;
@@ -37,6 +42,12 @@
 
 .second {
   align-items: flex-end;
+}
+
+.first.mob,
+.second.mob {
+  width: 90%;
+  flex-direction: column;
 }
 
 .first > p {
@@ -48,6 +59,10 @@
   font-size: 4.2vh;
   margin-bottom: 3.5vh;
   font-weight: 500;
+}
+
+.first.mob > p:nth-child(1) {
+  width: 80%;
 }
 .first > p:nth-last-child(1) {
   font-size: 2.2vh;
@@ -76,4 +91,9 @@
 
 .second > p:nth-last-child(1) {
   margin-bottom: 0;
+}
+
+.second.mob > p,
+.second.mob > a {
+  font-size: 2.5vh;
 }
