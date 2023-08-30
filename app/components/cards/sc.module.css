@@ -1,0 +1,47 @@
+.container {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10vh;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.card {
+    width: 80%;
+    height: 35%;
+    background-color: var(--background-300);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    margin-top: 30%;
+}
+
+
+.card.large {
+    margin-top: 0;
+    margin-left: -30%;
+    width: 40%;
+}
+
+.card > p:nth-child(1) {
+    font-family: 'DM Serif Display', serif !important;
+    font-size: 3vh;
+    margin-bottom: 1.5vh;
+}
+
+.card > p:nth-last-child(1) {
+    font-size: 1.8vh;
+}

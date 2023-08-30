@@ -1,0 +1,35 @@
+.container {
+  width: 100%;
+  height: 88vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.first,
+.second {
+  width: 90%;
+  height: 45%;
+  align-items: center;
+  justify-content: space-between;
+}
+.paragraphs {
+  width: 35%;
+  flex-direction: column;
+}
+
+.paragraphs > p {
+  font-size: 7vh;
+  margin-bottom: 0;
+}
+.paragraphs > p:nth-last-child(1) {
+  width: 90%;
+  font-size: 2vh;
+  line-height: 2.6vh;
+}
+
+.second > .items {
+  width: 32%;
+  height: 100%;
+  /* background-color: red; */
+}

@@ -1,9 +1,9 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -38,6 +38,62 @@
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
+
+  --background-100: #d3d3d3;
+  --background-200: #e3e3e3;
+  --background-300: #ffffff;
+
+  --static-white: #ffffff;
+  --static-black: #000000;
+
+  --dark-100: #000000;
+  --dark-200: #3c3c3c;
+  --dark-300: #626262;
+  --dark-500: #858585;
+  --dark-700: #c8c8c8;
+
+  --brand-100: #304149;
+  --brand-200: #CAE5F1;
+  --brand-300: #ea98a8;
+  --brand-400: #9cc559;
+
+  --accent-100: var(--brand-100);
+  --accent-200: var(--brand-200);
+  --accent-300: var(--brand-300);
+  --accent-500: var(--brand-400);
+
+  --select-100: #dce0ef;
+  --shadow-100: rgba(0, 0, 0, 0.3);
+}
+
+body {
+  background-color: var(--background-300);
+}
+
+p,
+a,
+div,
+input,
+textarea,
+button {
+  font-family: 'Poppins', sans-serif !important;
+  color: var(--dark-100) !important;
+}
+
+div,
+button {
+  display: flex;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  /* all: unset; */
+  font-family: "Inter", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -85,7 +141,7 @@ body {
   overflow-x: hidden;
 }
 
-body {
+/* body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -93,7 +149,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
 
 a {
   color: inherit;

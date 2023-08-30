@@ -1,0 +1,6 @@
+.container{
+    width: 100dvw;
+    overflow-x: hidden;
+    flex-direction: column;
+    background-color: var(--background-300);
+}

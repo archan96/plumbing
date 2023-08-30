@@ -1,0 +1,38 @@
+.head {
+  width: 100%;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  align-self: center;
+  height: 12vh;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  background-color: var(--background-300);
+  z-index: 9999;
+}
+
+.first {
+  align-items: center;
+  
+}
+
+.nav {
+  align-items: center;
+}
+
+.nav > a {
+    margin-right: 1vw;
+    cursor: pointer;
+}
+
+.logo {
+    margin-right: 2vw;
+}
+
+.logo > img {
+    width: 10vw;
+    object-fit: contain;
+}
+
